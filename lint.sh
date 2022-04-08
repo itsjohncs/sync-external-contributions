@@ -15,5 +15,5 @@ BASH_FILES=("$ROOT_DIR/lint.sh")
 set -x +e
 shellcheck "${BASH_FILES[@]}"
 shfmt -i=4 -sr -d "${BASH_FILES[@]}"
-pylint --disable=C0114,C0116 "${PYTHON_FILES[@]}"
+pylint --disable=C0114,C0116,C0115 "${PYTHON_FILES[@]}"
 black --check "${PYTHON_FILES[@]}"

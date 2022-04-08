@@ -14,4 +14,4 @@ BASH_FILES=("$ROOT_DIR/lint.sh")
 
 set -x
 shfmt -i=4 -sr "${BASH_FILES[@]}"
-black "${PYTHON_FILES[@]}"
+black -l 80 "${PYTHON_FILES[@]}"
